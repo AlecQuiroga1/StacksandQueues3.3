@@ -54,7 +54,12 @@ public class StackOfPlates {
 			count--;
 			Stack <Integer> currentStack = list.get(list.size()-1);
 			System.out.println("The Number pulled out: " + currentStack.pop());
-			list.remove(list.size()-1);
+			
+			// Removes the stack if there is nothing in it.
+			if (count%maxStackSize == 0) {
+				list.remove(list.size()-1);
+			}
+			
 			
 		}
 		
